@@ -1,5 +1,5 @@
 # CompraFacilRP
-:bulb: Site
+:bulb: Site inicial
 <htlm>
 
     <head>
