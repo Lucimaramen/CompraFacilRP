@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Componente Jumbotron</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/
+css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/
+jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/
+popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/
+bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css">
+
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    .container-fluid{
+      
+        padding-left: 90px;
+    }
+    body{
+        padding-bottom: 50px;
+    }
+    #contatos { cursor: pointer; }
+    #pedidos{
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px
+    }
+
+</style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cadastro.html">Cadastro</a>
+              </li>
+              <li id="contatos" class="nav-item">
+                <a class="nav-link" data-toggle="modal"
+                data-target="#modal-inclusão-registro">Contatos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Administrativo
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pedidos.html">Pedidos</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+</header>
+<body>
+    
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <h1>Relação de pedidos</h1>
+    </div>
+  </div>
+
+  <div id="pedidos">
+    <div>
+      <div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Digite o número" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+      </div>
+      <br />
+      <h4>Número do pedido: 2503</h4>
+    </div>
+    <hr></hr>
+    <div>
+      <form id="form-inclusao-registro" action="" method="post">
+        <h5>Dados da compra:</h5>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Cliente">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Endereço">
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Documento">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Valor total">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Data Compra">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Data Entrega">
+                </div>
+            </div>
+        </div>
+        <h5>Itens:</h5>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Quantidade">
+            </div>
+        </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Item">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Supermercado">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Quantidade">
+            </div>
+        </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Item">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Supermercado">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Quantidade">
+            </div>
+        </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Item">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Supermercado">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Quantidade">
+            </div>
+        </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Item">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Supermercado">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Quantidade">
+            </div>
+        </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Item">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Supermercado">
+                </div>
+            </div>
+        </div>
+
+    </form> 
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>    
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal Exemplo -->
+<!-- The Modal -->
+<div class="modal fade" id="modal-inclusão-registro">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Cadastro de Registros</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form id="form-inclusao-registro" action="" method="post">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Endereço">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Numero">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Complemento">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Bairro">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="CPF">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="RG">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="CNH">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Titulo de Eleitor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Masculino">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="sobrenome" name="login" placeholder="Estado Civil">
+                            </div>
+                        </div>
+                    </div>
+
+                </form> 
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Gravar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>    
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
